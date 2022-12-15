@@ -1,63 +1,116 @@
 <html>
-  <head>
-    <style>
-      
-      UL {
-List-style-type: none;
-        Margin; 0;
-        padding: 0;
-        overflow: hidden;
-        backround-color: black
-          
-      }
-li a:howver:not(.active) {
-  backround-color : gray;
-  
-      }
-      
-      .active{
-        background-color yellowgreen;
-      }
-    </style>
-  </head>
-  <body>
-    <ul>
-      
-      <li>a href="PROFILE">PROFILE</a></li>
-  <li>a class="active"href="TRAVEL">TRAVEL</a></li>
-<li>a href="CAREER">CAREE</a></li>
-
+<head>
 <style>
-  .tab button.active{
-    background-color; lightgreen;
-  }
-  body[
-  background-color: lightgreen;
-  }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+  border-right:1px solid black;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+}
+
+.active {
+  background-color: yellowgreen;
+}
 </style>
 </head>
 <body>
-  <div class="tab">
-    <button class="tablinks" onmouseover="openName(evnt,'JP')">JAPAN</button>
-     <button class="tablinks" onmouseover="openName(evnt,'MX')">MEXICO</button>
-    <button class="tablinks" onmouseover="openName(evnt,'KR')">KOREA</button>
-    
-  </div>
-  
-  <div id="JP class="tabcontent">
+
+<ul>
+  <li><a href="https://veejii.github.io/Vv/vv.html">PROFILE</a></li>
+  <li><a href="https://veejii.github.io/Vv/trav.html">TRAVEL</a></li>
+  <li><a class="active" href="">CAREER</a></li>
+</ul>
+
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+.tab {
+  float: left;
+  width: 30%;
+  height: 300px;
+}
+
+.tab button {
+  display: block;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.tab button.active {
+  background-color: lightblue ;
+}
+
+.tabcontent {
+  padding: 5px 12px;
+  width: 70%;
+  height: 500px;
+  display: none;
+}
+body {
+  background-color: lightblue ;
+}
+</style>
+</head>
+<body>
+<div class="tab">
+  <button class="tablinks" onmouseover="openName(event, 'JP')">JAPAN</button>
+  <button class="tablinks" onmouseover="openName(event, 'MX')">MEXICO</button>
+  <button class="tablinks" onmouseover="openName(event, 'KR')">KOREA</button>
+</div>
+<div id="JP" class="tabcontent">
  <p>My first travel is JAPAN</p>
- </div>
- <div id="MX class="tabcontent">
+</div>
+
+<div id="MX" class="tabcontent">
  <p>My second travel is MEXICO</p>
-  </div>
-    <div id="KR class="tabcontent">
- <p>My third travel is KOREA</p>
- </div>
-                                  
-     <div class="clearfix"></div> 
-                                
-                          
-                          </body>
-                          </html>
-                         
+</div>
+
+<div id="KR" class="tabcontent">
+  <p>My third travel is KOREA</p>
+</div>
+
+<div class="clearfix"></div>
+
+<script>
+function openName(evt, profName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(profName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+</body>
+</html>
                                   
