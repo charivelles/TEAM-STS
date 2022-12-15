@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <style>
+      ul{
+        overflow: hidden;
+        background-color: black;
+      }
+      li a:hover:not(active){
+        background-color: grey;
+      }
+      .active{
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="">PROFILE</a></li>
+      <li><a href="">TRAVEL</a></li>
+      <li><a class="active" href="">CAREER</a></li>
+    </ul>
+    <style>
+      .tab button.active{
+        background-color: lightgreen;
+      }
+      body{
+        background-color: lightgreen;
+      }
+    </style>
+    <body>
+        <div class="tab">
+          <button class="tablinks" onmouseover="openName(event, 'CH')">CHOREOGRAPHER</button>
+           <button class="tablinks" onmouseover="openName(event, 'ID')">IDOL</button>
+           <button class="tablinks" onmouseover="openName(event, 'AU')">AUTHOR</button>
+          </div>
+      <div id="CH" class="tabcontent>
+                          <p>I want to share my skills in dancing</p>  </div>  
+                              <div id="CH" class="tabcontent>
+                          <p>I want to share my skills in dancing</p> 
+            <div id="ID" class="tabcontent>
+                                <p>I want to be an entertainer</p> </div>
+                         <div id="AU" class="tabcontent>
+                                <p>I want to express my imaginations</p> </div>  
+        <div class="clearfix"></div>
+                    
+  </body>
+  
+</html>
